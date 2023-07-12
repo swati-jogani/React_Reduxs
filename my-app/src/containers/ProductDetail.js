@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import './main.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { selectedProducts ,removeSelectedProducts  } from '../redux/actions/ProductActions';
+import { selectedProducts, removeSelectedProducts } from '../redux/actions/ProductActions';
 
 function ProductDetail() {
     const product = useSelector((state) => state.product)
@@ -21,7 +21,7 @@ function ProductDetail() {
     useEffect(() => {
         if (productId && productId != "") {
             fetchProductDetail()
-            return () =>{
+            return () => {
                 dispatch(removeSelectedProducts());
             }
         }
@@ -29,13 +29,13 @@ function ProductDetail() {
     return (
         <div className="ui grid container">
             {Object.keys(product).length === 0 ? (
-                <div style={{marginTop:"80px",fontSize:"30px"}}>loading...</div>
+                <div style={{ marginTop: "80px", fontSize: "30px" }}>loading...</div>
             ) : (
                 <div className="ui placeholder segment" style={{ marginTop: '50px' }}>
                     <div className="ui two column stackable center aligned grid">
                         <div className="ui vertical divider">AND</div>
                         <div className="middle aligned row">
-                            <div className="column lp">
+                            <div className="column rp">
                                 <img className="ui fluid image" src={image} />
                             </div>
                             <div className="column rp">
@@ -43,7 +43,7 @@ function ProductDetail() {
                                 <h2 style={{ marginBottom: "30px" }}>
                                     <a className='ui teal tag label'>${price}</a>
                                 </h2>
-                                <h3 className='ui brown header' style={{ marginBottom: "50px" ,fontSize:"20px"}}>Category :- {category}</h3>
+                                <h3 className='ui brown header' style={{ marginBottom: "50px", fontSize: "20px" }}>Category :- {category}</h3>
                                 <p style={{ marginBottom: "70px" }}>{description}</p>
                                 <div className="ui vertical animated button" tabIndex={0}>
                                     <div className="hidden content">
@@ -55,8 +55,7 @@ function ProductDetail() {
                         </div>
                     </div>
                 </div>
-            )
-            }
+            )}
         </div >
     )
 }
