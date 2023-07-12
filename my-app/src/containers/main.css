@@ -1,0 +1,21 @@
+.header  {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  /* height: 45px; */
+}
+.card .image {
+  height: 400px;
+  background-size: cover;
+}
+.image img {
+  height: 100% !important;
+}
+
+.ui .button {
+  background-color: #d52c70 !important;
+  color: white;
+  padding: 15px 15px;
+}
