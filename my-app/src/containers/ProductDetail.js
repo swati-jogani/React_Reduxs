@@ -35,7 +35,7 @@ function ProductDetail() {
                     <div className="ui two column stackable center aligned grid">
                         <div className="ui vertical divider">AND</div>
                         <div className="middle aligned row">
-                            <div className="column lp"> 
+                            <div className="column rp"> 
                                 <img className="ui fluid image" src={image} />
                             </div>
                             <div className="column rp">
